@@ -88,10 +88,16 @@ public class CustomSecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         // 모든 패턴을 허락
+        // origin 의 의미 protocol+host+port
+        // protocol : http://, https://
+        // host : 도메인(localhost, www.naver.com, www.goole.com) 이나 ip 주소
+        // post : :80, :8080, :3306
         configuration.setAllowedOriginPatterns(Arrays.asList("*"));
+        // ajax 에서 실행할 메서드 설정
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "HEAD"));
-
+        // 사용할 헤더 설정
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type","Cache-Control"));
+        // cors 설정을 사용 설정
         configuration.setAllowCredentials(true);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 
