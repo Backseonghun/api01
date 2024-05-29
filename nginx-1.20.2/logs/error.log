@@ -1,0 +1,1 @@
+2024/05/29 09:31:03 [error] 5420#4492: *1 CreateFile() "C:\java-workspace\api01\nginx-1.20.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
